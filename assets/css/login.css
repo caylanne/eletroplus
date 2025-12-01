@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e5e8ec;
+    font-family: "Poppins", sans-serif;
+    padding: 20px; /* evita cortes em telas pequenas */
+}
+
+header, h1 {
+    text-align: center;
+    color: white;
+}
+
+/* ==============================
+   CONTAINER TOTALMENTE RESPONSIVO
+================================= */
+.container {
+    background-color: #70A1B3;
+    width: 100%;
+    max-width: 440px;     /* antes era fixo */
+    min-height: 650px;    /* substitui os 956px que quebravam no celular */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 12px 16px 32px rgba(0, 0, 0, .400);
+}
+
+.container-container {
+    margin-top: 40px;
+}
+
+/* ==============================
+   BOTÕES SUPERIORES
+================================= */
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.header-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px; /* ajustado para caber no mobile */
+    border-radius: 6px;
+    flex: 1;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.header-btn.active {
+    background-color: white;
+    color: #70A1B3;
+}
+
+/* ==============================
+   TÍTULO E LOGO
+================================= */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.imgm {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 100px;
+    height: 100px;
+}
+
+/* ==============================
+   FORMULÁRIO
+================================= */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 12px 16px 32px rgba(0, 0, 0, .220);
+}
+
+/* ==============================
+   BOTÃO FINAL
+================================= */
+.butn {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    border: 2px solid #dddfe2;
+    border-radius: 6px;
+    background-color: #5a7577;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    text-align: center;
+    margin: 60px auto 0 auto; /* centralizado */
+    text-decoration: none;
+}
+
+.butn:hover {
+    background-color: #cdcbcd69;
+    text-decoration: none;
+}
+
+
+/* ==========================
+        RESPONSIVIDADE
+=========================== */
+
+/* CELULARES ATÉ 480px */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .header-btn {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    input {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .butn {
+        max-width: 180px;
+        margin-top: 40px;
+        padding: 10px;
+        text-decoration: none;
+    }
+}
+
+/* CELULARES MUITO PEQUENOS 360px */
+@media (max-width: 360px) {
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-btn {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* TABLETS */
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
