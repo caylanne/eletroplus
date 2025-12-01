@@ -11,70 +11,66 @@ body{
     min-height: 100vh;
     background-color: #e5e8ec;
     font-family: "Poppins", sans-serif;
-    padding: 20px; /* evita corte em celulares */
+    padding: 20px; /* Evita cortes em telas pequenas */
 }
 
-header, h1{
-    text-align: center;
-    color: white;
-    padding-top: 0px;
-}
-
-/* CONTAINER PRINCIPAL RESPONSIVO */
+/* ==========================
+   CONTAINER PRINCIPAL
+========================== */
 .container{
     background-color: #70A1B3;
     width: 100%;
-    max-width: 440px; /* antes era fixo */
-    
-    min-height: 650px; /* substitui altura fixa */
+    max-width: 440px; /* Responsivo */
+    min-height: 650px;
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 12px 16px 32px rgba(0, 0, 0, .400);
+    box-shadow: 8px 10px 28px rgba(0, 0, 0, .25);
 }
 
+/* Wrapper */
 .container-container{
     margin-bottom: 40px;
 }
 
-/* BOTÕES DO TOPO */
+/* ==========================
+   BOTÕES DO TOPO
+========================== */
 .header-buttons {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    padding: 4px;
-    margin-bottom: 100px;
-    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px;
+    gap: 5px;
 }
 
 .header-btn {
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    padding: 10px 55px;
-    border-radius: 6px;
+    padding: 12px 0;
+    border-radius: 8px;
     flex: 1;
     transition: all 0.3s;
-    text-decoration: none;
 }
 
 .header-btn.active {
     background-color: white;
     color: #70A1B3;
-    text-decoration: none;
 }
 
+/* TITULO */
 h1 {
     text-align: center;
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-/* LOGO CENTRALIZADA */
+/* LOGO */
 .imgm{
     display: block;
     margin: 0 auto 20px auto;
@@ -82,68 +78,71 @@ h1 {
     height: 100px;
 }
 
-/* FORMULÁRIO */
+/* ==========================
+   FORMULÁRIO
+========================== */
 .inputs {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 label{
-    display: block;
-    margin-bottom: 5px;
     color: white;
+    font-size: 15px;
 }
 
 input{
     width: 100%;
     padding: 12px;
-    border: 1px solid #dddfe2;
-    border-radius: 6px;
+    border: 1px solid #dce0e3;
+    border-radius: 8px;
     font-size: 16px;
-    box-shadow: 12px 16px 32px rgba(0, 0, 0, .220);
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
 }
 
-/* BOTÃO CADASTRAR RESPONSIVO */
+/* ==========================
+   BOTÃO CADASTRAR
+========================== */
 .butn {
     width: 100%;
-    max-width: 200px;
-    padding: 12px;
-    border: 2px solid #dddfe2;
-    border-radius: 6px;
+    max-width: 230px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
     background-color: #5a7577;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 40px auto 0 auto; /* centraliza automaticamente */
+    margin: 40px auto 0 auto;
     display: block;
     text-align: center;
 }
 
 .butn:hover {
-    background-color: #cdcbcd69;
+    background-color: #4a6062;
 }
 
-/* ======================
-    RESPONSIVIDADE
-====================== */
+/* ==========================
+      RESPONSIVIDADE
+========================== */
 
 /* CELULARES ATÉ 480px */
 @media (max-width: 480px){
 
     .container{
-        padding: 20px;
+        padding: 22px;
     }
 
     h1{
-        font-size: 1.6rem;
-        margin-bottom: 25px;
+        font-size: 1.5rem;
+        margin-bottom: 22px;
     }
 
     .header-btn{
         font-size: 14px;
-        padding: 8px 0;
+        padding: 10px 0;
     }
 
     input{
@@ -152,14 +151,13 @@ input{
     }
 
     .butn{
-        margin-top: 30px;
-        max-width: 180px;
+        max-width: 200px;
         font-size: 15px;
-        padding: 10px;
+        padding: 12px;
     }
 }
 
-/* CELULARES MUITO PEQUENOS 360px */
+/* CELULARES MUITO PEQUENOS (ex: Moto E) */
 @media (max-width: 360px){
 
     .header-buttons{
@@ -169,22 +167,22 @@ input{
 
     .header-btn{
         width: 100%;
-        padding: 10px 0;
+        padding: 12px 0;
     }
 
     h1{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .container{
-        padding: 20px;
+        padding: 18px;
     }
 }
 
 /* TABLETS */
 @media (min-width: 768px){
     .container{
-        max-width: 500px;
+        max-width: 520px;
         padding: 40px;
     }
 
