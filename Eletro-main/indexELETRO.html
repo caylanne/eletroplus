@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Eletro+</title>
+  <link rel="shortcut icon" href="assets/img/ELETRO-SEM-FUNDO-Copia.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/CADASTRO.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="container-container">
+      <h1>Cadastre-se</h1>
+
+      <img src="assets/img/ELETRO+ SEM FUNDO.png" alt="Logo Eletro+" class="imgm">
+
+      <div class="header-buttons">
+        <button class="header-btn active" id="btn-cadastrar">Cadastrar</button>
+        <a href="loginELETRO.html">
+          <button class="header-btn" id="btn-login">Login</button>
+        </a>
+      </div>
+
+      <div class="form">
+        <form id="form-register">
+          <div class="inputs">
+            
+            <label for="pnome"><strong>Nome:</strong></label>
+            <input type="text" id="pnome" name="pnome" placeholder="Seu nome" required>
+
+            <label for="snome"><strong>Sobrenome:</strong></label>
+            <input type="text" id="snome" name="snome" placeholder="Seu sobrenome" required>
+
+            <label for="email"><strong>E-mail:</strong></label>
+            <input type="email" id="email" name="email" placeholder="fulano@gmail.com" required>
+
+            <label for="fone"><strong>Celular:</strong></label>
+            <input type="tel" id="fone" name="fone" placeholder="(83) 9 9999-9999" maxlength="16" required>
+
+            <label for="senha"><strong>Senha:</strong></label>
+            <input type="password" id="senha" name="senha" minlength="6" placeholder="********" required>
+
+            <label for="csenha"><strong>Confirme sua senha:</strong></label>
+            <input type="password" id="csenha" name="csenha" minlength="6" placeholder="********" required>
+
+            <button type="submit" class="butn">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Formata automaticamente o número ao sair do campo (ex: (83) 9 9999-9999)
+    const foneInput = document.getElementById('fone');
+
+    foneInput.addEventListener('blur', (e) => {
+      let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
+
+      // Se tiver exatamente 11 dígitos, formata no padrão (XX) 9 XXXX-XXXX
+      if (value.length === 11) {
+        const ddd = value.slice(0, 2);
+        const primeiro = value.slice(2, 3);
+        const meio = value.slice(3, 7);
+        const fim = value.slice(7);
+        e.target.value = `(${ddd}) ${primeiro} ${meio}-${fim}`;
+      } else {
+        alert('Digite um número de celular válido com 11 dígitos (incluindo DDD).');
+        e.target.value = ''; // limpa se estiver incorreto
+      }
+    });
+
+    // Validação do formulário
+    document.getElementById('form-register').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('pnome').value.trim();
+      const sobrenome = document.getElementById('snome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value;
+      const csenha = document.getElementById('csenha').value;
+      const telefone = document.getElementById('fone').value.trim();
+
+      if (!nome || !sobrenome || !email || !telefone || !senha || !csenha) {
+        alert('Preencha todos os campos obrigatórios!');
+        return;
+      }
+
+      const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Digite um e-mail válido!');
+        return;
+      }
+
+      if (senha.length < 6) {
+        alert('A senha deve ter no mínimo 6 caracteres!');
+        return;
+      }
+
+      if (senha !== csenha) {
+        alert('As senhas não coincidem!');
+        return;
+      }
+
+      const emailsExistentes = ["teste@gmail.com", "usuario@gmail.com"];
+      if (emailsExistentes.includes(email)) {
+        alert('Este e-mail já está cadastrado!');
+        return;
+      }
+
+      alert('Cadastro realizado com sucesso!');
+      
+      setTimeout(() => {
+        window.location.href = "telaInicial.html";
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>

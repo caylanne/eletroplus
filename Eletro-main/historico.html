@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/ELETRO-SEM-FUNDO-Copia.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/simulador.css">
+    <title>Histórico</title>
+
+    <style>
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .top-bar svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+            cursor: pointer;
+        }
+
+        .titulo-historico {
+            text-align: center;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* Caixa cinza do histórico */
+        .historico-box {
+            background: rgba(72, 72, 72, 0.6);
+            width: 100%;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .data-hist {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .posto {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .horario {
+            font-size: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <!-- TOPO COM SETA E SINO -->
+         <a href="telaInicial.html" class=" sla">
+             <div class="top-bar">
+                 <!-- Ícone voltar -->
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 16 16">
+                     <path fill-rule="evenodd"
+                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                    </svg>
+                    
+                    <h3 class="titulo-historico">Histórico</h3>
+                    
+                    <!-- Ícone sino -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 16 16">
+                        <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 2.598-1.528 3.78-.24.275-.472.524-.69.743-.273.273-.26.723.036.979.284.244.71.229.977-.036L2 11h12l.205.206c.267.265.693.28.977.036.295-.256.309-.706.036-.979-.218-.219-.45-.468-.69-.743C13.5 8.598 13 7.098 13 6a5.002 5.002 0 0 0-4.005-4.901z" />
+                    </svg>
+                </div>
+            </a>
+        
+        <br><br>
+
+        <!-- BLOCOS DE HISTÓRICO -->
+        <div class="historico-box">
+            <div class="data-hist">06/10/2025</div>
+            <div class="posto">EletroPosto – China Patos</div>
+            <div class="horario">18:01:10 às 20:33:15</div>
+        </div>
+
+        <div class="historico-box">
+            <div class="data-hist">26/09/2025</div>
+            <div class="posto">EletroPosto – Patos Shopping</div>
+            <div class="horario">19:30:30 às 20:45:05</div>
+        </div>
+
+        <div class="historico-box">
+            <div class="data-hist">20/09/2025</div>
+            <div class="posto">EletroPosto – Bar do Cuscuz CG</div>
+            <div class="horario">10:00:10 às 11:03:55</div>
+        </div>
+
+        <div class="historico-box">
+            <div class="data-hist">13/09/2025</div>
+            <div class="posto">EletroPosto – Altiplano JP</div>
+            <div class="horario">13:01:19 às 14:02:02</div>
+        </div>
+
+        <div class="historico-box">
+            <div class="data-hist">07/09/2025</div>
+            <div class="posto">EletroPosto – BessaGrill JP</div>
+            <div class="horario">11:05:18 às 13:33:45</div>
+        </div>
+
+        <footer>
+            <p>Desenvolvido pela equipe da <strong>ELETRO+</strong></p>
+            <p>&copy; 2025, <strong>ELETRO+</strong> - Todos os direitos reservados</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
